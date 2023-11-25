@@ -1,0 +1,14 @@
+body {
+    background-image: linear-gradient(to bottom, rgb(28, 24, 255), rgb(105, 132, 253));
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center;
+    font-Family: sans-serif;
+    overflow-y: scroll; overflow-x: hidden;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
