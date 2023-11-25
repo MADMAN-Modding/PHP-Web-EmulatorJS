@@ -1,16 +1,16 @@
 function main() {
     link = "github.com"
-    document.getElementById("title").innerHTML = "test"
+
+    let gb = [];
     
     node = document.getElementById('test');
-    node.insertAdjacentHTML("afterend", "<a id='test' href=''>test</a> ")
+    node.insertAdjacentHTML("afterend", '<a id="test2" href="gmail.com">test</a> ');
 
-}
+    document.getElementById("test2").href = "https://github.com";
 
-function test () {
-    document.getElementById('test').href = "tests.com";
+    for (let i = 0; i < 1000; i++) {
+        gb.push[i] = FileList
+    }
 }
 
 main();
-
-test();
