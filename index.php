@@ -23,7 +23,7 @@
         <?php
             if ($consoleFinder = opendir('roms/')) {
                 $consoleList = [];
-                $files = [];
+                $romList = [];
                 while (false !== ($console = readdir($consoleFinder))) {
                     if ($console != "." && $console != "..") {
                         $consoleList[] = $console;
@@ -39,7 +39,7 @@
                 foreach($consoleList as $consoleName) {              
                     
                     // Scans the rom folders
-                    if ($scanner = opendir("roms/$consoleName")) {
+                    if ($romFinder = opendir("roms/$consoleName")) {
 
                         // Sets the properties of the game links and sets the game anchor properties
                             echo "<style>.$consoleName-link {font-size: 20px; display: none; margin-bottom: 10px;}.$consoleName:hover .$consoleName-link {display: block;}</style>";
@@ -49,30 +49,32 @@
                         // Makes the Title
                             echo "<h2 class=$consoleName>", strtoupper($consoleName), " Games</h2>";
                             
-                        $files = []; // Reset $files array for each console
-                        while (false !== ($rom = readdir($scanner))) {
+                        $romList = []; // Reset $romList array for each console
+                        while (false !== ($rom = readdir($romFinder))) {
                             if ($rom != "." && $rom != "..") {
-                                $files[] = $rom;
+                                $romList[] = $rom;
                             }
                         }
 
+                        closedir($romFinder);
+
                         // Alphabetically sorts the roms
-                        natsort($files);
+                        natsort($romList);
 
                         // Runs a loop for every rom to make an anchor
-                        foreach($files as $file) {
+                        foreach($romList as $romName) {
                             
                             // Replace the console extension .7z .rar and .zip with nothing
-                                $file = str_replace(".$consoleName","",$file);
-                                $file = str_replace(".sfc","",$file);
-                                $file = str_replace(".7z","",$file);
-                                $file = str_replace(".rar","",$file);
-                                $file = str_replace(".zip","",$file);
-                            echo "<a class=$consoleName-link href=game.html?rom=$file&console=$consoleName>";
+                                $romName = str_replace(".$consoleName","",$romName);
+                                $romName = str_replace(".sfc","",$romName);
+                                $romName = str_replace(".7z","",$romName);
+                                $romName = str_replace(".rar","",$romName);
+                                $romName = str_replace(".zip","",$romName);
+                            echo "<a class=$consoleName-link href=game.html?rom=$romName&console=$consoleName>";
                             
-                            $file = str_replace("-"," ",$file);
+                            $romName = str_replace("-"," ",$romName);
 
-                            echo "$file</a>";
+                            echo "$romName</a>";
                         }
                         echo "</div>";
                     }
