@@ -13,18 +13,49 @@ body {
     text-align: center;
 }
 
-#gb {
-    margin-left: auto;
-    margin-right: auto;
+.title {
+    display: inline;
 }
 
-#gb-link {
+.github {
+    display: inline;
+    padding-top: 6px;
+    float: right;
+}
+
+.nds, .gb, .gba, .gbc, .nes, .snes, .psx, .n64 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: fit-content;
+}
+
+.nds-link, .gb-link, .gba-link, .gbc-link, .nes-link, .snes-link, .psx, .n64 {
     font-size: 20px;
     display: none;
     margin-bottom: 10px;
 }
 
-.gb:hover #gb-link {
+.nds:hover .nds-link {
+    display: block;
+}
+
+.gb:hover .gb-link {
+    display: block;
+}
+
+.gba:hover .gba-link {
+    display: block;
+}
+
+.gbc:hover .gbc-link {
+    display: block;
+}
+
+.nes:hover .nes-link {
+    display: block;
+}
+
+.snes:hover .snes-link {
     display: block;
 }
 

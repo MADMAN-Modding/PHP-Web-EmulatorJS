@@ -2,6 +2,7 @@
     <head>
         <!--HTML file auto generated using EmulatorJS codehelper-->
         <link type="text/css" rel="stylesheet" href="css/game.css">
+        <title id="title"></title>
     </head>
     <body>
         <center>
@@ -14,17 +15,32 @@
             
             const rom = url.get("rom");
 
-            const console = url.get("console");
+            let console = url.get("console");
 
             const path = "/roms/" + console + "/";
+
+            let extension = "." + console;
+
+            if (console=="snes") {
+                extension = ".sfc";
+            } else if (console == "gbc") {
+                console = "gb";
+            }
+
+            // Changes the page title to the rom name
+            function rename () {
+                document.title = rom;
+            }
 
             EJS_player = "#game";
             EJS_core = console;
             EJS_gameName = rom - "." - console;
             EJS_color = "#0064ff";
             EJS_startOnLoaded = true;
-            EJS_pathtodata = "../data";
-            EJS_gameUrl = path + rom;
+            EJS_pathtodata = "data";
+            EJS_gameUrl = path + rom + extension
+            // + "." + console;
+            rename();
         </script>
         <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js"></script>
     </body>

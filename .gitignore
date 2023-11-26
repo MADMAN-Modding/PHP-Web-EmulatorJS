@@ -1,6 +1,6 @@
 **/node_modules/
 *.db
-roms/
+roms/*/*
 yarn.lock
 package-lock.json
 .vscode/settings.json
