@@ -18,7 +18,7 @@
         
         <h3>Hover/Tap on a console to list the games</h3>
 
-        <h5>(If a game loads but doesn't start just press a button like enter or a touchscreen button)</h5>
+        <h5>(If a game loads but doesn't start just press a button such as enter or a touchscreen button)</h5>
 
         <?php
             if ($consoleFinder = opendir('roms/')) {
