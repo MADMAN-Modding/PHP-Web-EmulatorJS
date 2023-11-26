@@ -8,25 +8,3 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
 }
-
-#title {
-    text-align: center;
-}
-
-#gb {
-    text-align: center;
-}
-
-#gb-link {
-    font-size: 20px;
-    display: none;
-}
-
-.gb:hover #gb-link {
-    display: block;
-}
-
-a:visited, a:link {
-    color: white;
-    text-decoration: none;
-}

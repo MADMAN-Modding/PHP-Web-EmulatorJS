@@ -1,16 +1,9 @@
-function main() {
-    link = "github.com"
+function gb() {    
+    node = document.getElementById('gb');
+    node.insertAdjacentHTML("beforeend", '<a id="gb-link" href="">The Addams Family</a> ');
 
-    let gb = [];
-    
-    node = document.getElementById('test');
-    node.insertAdjacentHTML("afterend", '<a id="test2" href="gmail.com">test</a> ');
+    document.getElementById("gb-link").href = "game.html?rom=Addams-Family,-The-(USA).gb&console=gb";
 
-    document.getElementById("test2").href = "https://github.com";
-
-    for (let i = 0; i < 1000; i++) {
-        gb.push[i] = FileList
-    }
 }
 
-main();
+gb();

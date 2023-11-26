@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <!--HTML file auto generated using EmulatorJS codehelper-->
+        <link type="text/css" rel="stylesheet" href="css/game.css">
+    </head>
+    <body>
+        <center>
+            <div style="width:90vw;height:90vh;max-width:100%;padding-top: auto;padding-bottom: auto;">
+                <div id="game"></div>
+            </div>
+        </center>
+        <script>
+            const url = new URLSearchParams(window.location.search);
+            
+            const rom = url.get("rom");
+
+            const console = url.get("console");
+
+            const path = "/roms/" + console + "/";
+
+            EJS_player = "#game";
+            EJS_core = console;
+            EJS_gameName = rom - "." - console;
+            EJS_color = "#0064ff";
+            EJS_startOnLoaded = true;
+            EJS_pathtodata = "../data";
+            EJS_gameUrl = path + rom;
+        </script>
+        <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js"></script>
+    </body>
+</html>
