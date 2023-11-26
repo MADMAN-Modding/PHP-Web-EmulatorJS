@@ -18,7 +18,7 @@
         
         <h3>Hover/Tap on a console to list the games</h3>
 
-        <h5>(If a game loads but doesn't start just press a button like enter or a touchscreen button)
+        <h5>(If a game loads but doesn't start just press a button like enter or a touchscreen button)</h5>
 
         <?php
             if ($consoleFinder = opendir('roms/')) {
@@ -41,20 +41,15 @@
                     // Scans the rom folders
                     if ($scanner = opendir("roms/$consoleName")) {
 
-                        // Makes the CSS
-                            echo "<style>";
-                            // Sets the properties of the game links
-                                echo ".$consoleName-link {font-size: 20px; display: none; margin-bottom: 10px;}";
-                            // Sets the games to appear on hover
-                                echo ".$consoleName:hover .$consoleName-link {display: block;}";
-                            echo "</style>";
+                        // Sets the properties of the game links and sets the game anchor properties
+                            echo "<style>.$consoleName-link {font-size: 20px; display: none; margin-bottom: 10px;}.$consoleName:hover .$consoleName-link {display: block;}</style>";
                         
                         // Creates the Div
                             echo "<div class=$consoleName>";
                         // Makes the Title
                             echo "<h2 class=$consoleName>", strtoupper($consoleName), " Games</h2>";
                             
-                            $files = []; // Reset $files array for each console
+                        $files = []; // Reset $files array for each console
                         while (false !== ($rom = readdir($scanner))) {
                             if ($rom != "." && $rom != "..") {
                                 $files[] = $rom;
