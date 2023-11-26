@@ -16,35 +16,59 @@
             </div>
         </center>
         <script>
+
+            // Gets variables from the URL
             const url = new URLSearchParams(window.location.search);
             
+            // Gets the rom variable
             const rom = url.get("rom");
 
+            // Gets the console variable
             let console = url.get("console");
 
+            // Sets the path to directory for the rom
             const path = "/roms/" + console + "/";
 
+            // Sets the extension to add to the rom file
             let extension = "." + console;
 
+            // If the rom is a SNES rom, it will set the extension to the correct alternative
             if (console=="snes") {
                 extension = ".sfc";
-            } else if (console == "gbc") {
+            } 
+            
+            // If the rom is a GBC rom, it will change the console to be GB since they both use the GB core
+            else if (console == "gbc") {
                 console = "gb";
             }
 
-            // Changes the page title to the rom
+            // Changes the page title to the rom name
             function rename () {
                 document.title = rom;
             }
 
+            // Sets what document to use for the canvas
             EJS_player = "#game";
+            
+            // Sets the core
             EJS_core = console;
+
+            // Sets the game name for save states 
             EJS_gameName = rom - "." - console;
+
+            // Sets the UI color
             EJS_color = "#0064ff";
+
+            // Starts the game on laod
             EJS_startOnLoaded = true;
-            EJS_pathtodata = "data";
+
+            // Sets the local path to data
+            EJS_pathtodata = "data/";
+
+            // Sets the path to the rom files
             EJS_gameUrl = path + rom + extension
-            // + "." + console;
+
+            // Runs the rename function to change the page name
             rename();
         </script>
         <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js"></script>

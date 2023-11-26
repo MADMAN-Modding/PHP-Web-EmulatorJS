@@ -22,20 +22,29 @@
 
         <?php
             if ($consoleFinder = opendir('roms/')) {
+
+                // Makes the consoleList array
                 $consoleList = [];
+
+                // Makes the romList array
                 $romList = [];
+
+                // Reads the directory till the end
                 while (false !== ($console = readdir($consoleFinder))) {
+                    // Excludes . and .. as files/directories
                     if ($console != "." && $console != "..") {
+                        // Adds each rom to the list
                         $consoleList[] = $console;
                     }
                 }
+                
                 // Closes the directory to save resources
                 closedir($consoleFinder);
 
                 // Alphabetically sorts the consoles
                 natsort($consoleList);
 
-                // Runs all this code below for every folder found
+                // Runs all this code below for every folder found in
                 foreach($consoleList as $consoleName) {              
                     
                     // Scans the rom folders
@@ -44,18 +53,25 @@
                         // Sets the properties of the game links and sets the game anchor properties
                             echo "<style>.$consoleName-link {font-size: 20px; display: none; margin-bottom: 10px;}.$consoleName:hover .$consoleName-link {display: block;}</style>";
                         
-                        // Creates the Div
+                        // Creates the div
                             echo "<div class=$consoleName>";
-                        // Makes the Title
+
+                        // Makes the title for the console
                             echo "<h2 class=$consoleName>", strtoupper($consoleName), " Games</h2>";
-                            
-                        $romList = []; // Reset $romList array for each console
+                        
+                        // Reset $romList array for each console
+                        $romList = [];
+                        
+                        // Reads the directory till the end
                         while (false !== ($rom = readdir($romFinder))) {
+                            // Excludes . and .. as files/directories
                             if ($rom != "." && $rom != "..") {
+                                // Adds each rom to the list
                                 $romList[] = $rom;
                             }
                         }
 
+                        // Closes the directory to save resources
                         closedir($romFinder);
 
                         // Alphabetically sorts the roms
@@ -70,12 +86,17 @@
                                 $romName = str_replace(".7z","",$romName);
                                 $romName = str_replace(".rar","",$romName);
                                 $romName = str_replace(".zip","",$romName);
+                            
+                            // Makes the first part of the anchor setting the class, rom file name, and the console
                             echo "<a class=$consoleName-link href=game.html?rom=$romName&console=$consoleName>";
                             
+                            // Replaces all the - with spaces
                             $romName = str_replace("-"," ",$romName);
 
+                            // Finishes the anchor tag with the new file name
                             echo "$romName</a>";
                         }
+                        // Finishes the div
                         echo "</div>";
                     }
                 }
