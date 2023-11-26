@@ -9,7 +9,7 @@
             <!-- Latest compiled JavaScript -->
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> 
         
-        <link type="text/css" rel="stylesheet" href="css/index.css"/>
+        <link type="text/css" rel="stylesheet" href="css/universal.css"/>
     </head>
     <body>
         <h1 id="title">Welcome to E.P.W.F.<a href="https://github.com/MADMAN-Modding/EPWF" target="_blank"><img class="github" src="https://github.com/favicon.ico"></a></h1>
@@ -31,22 +31,37 @@
 
                 // Alphabetically sorts the consoles
                 natsort($consoleList);
+
+                // Runs all this code below for every folder found
                 foreach($consoleList as $consoleName) {              
                     
                     // Scans the rom folders
                     if ($scanner = opendir("roms/$consoleName")) {
+
+                        // Makes the CSS
+                            echo "<style>";
+                            // Sets the properties of the game links
+                                echo ".$consoleName-link {font-size: 20px; display: none; margin-bottom: 10px;}";
+                            // Sets the games to appear on hover
+                                echo ".$consoleName:hover .$consoleName-link {display: block;}";
+                            echo "</style>";
+                        
                         // Creates the Div
                             echo "<div class=$consoleName>";
                         // Makes the Title
                             echo "<h2 class=$consoleName>", strtoupper($consoleName), " Games</h2>";
                             
                             $files = []; // Reset $files array for each console
-                        while (false !== ($entry = readdir($scanner))) {
-                            if ($entry != "." && $entry != "..") {
-                                $files[] = $entry;
+                        while (false !== ($rom = readdir($scanner))) {
+                            if ($rom != "." && $rom != "..") {
+                                $files[] = $rom;
                             }
                         }
+
+                        // Alphabetically sorts the roms
                         natsort($files);
+
+                        // Runs a loop for every rom to make an anchor
                         foreach($files as $file) {
                             
                             // Replace the console extension .7z .rar and .zip with nothing
@@ -56,6 +71,8 @@
                                 $file = str_replace(".rar","",$file);
                                 $file = str_replace(".zip","",$file);
                             echo "<a class=$consoleName-link href=game.html?rom=$file&console=$consoleName>";
+                            
+                            $file = str_replace("-"," ",$file);
 
                             echo "$file</a>";
                         }

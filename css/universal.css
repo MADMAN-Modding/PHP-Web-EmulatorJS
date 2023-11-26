@@ -23,42 +23,6 @@ body {
     float: right;
 }
 
-.nds, .gb, .gba, .gbc, .nes, .snes, .psx, .n64 {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: fit-content;
-}
-
-.nds-link, .gb-link, .gba-link, .gbc-link, .nes-link, .snes-link, .psx, .n64 {
-    font-size: 20px;
-    display: none;
-    margin-bottom: 10px;
-}
-
-.nds:hover .nds-link {
-    display: block;
-}
-
-.gb:hover .gb-link {
-    display: block;
-}
-
-.gba:hover .gba-link {
-    display: block;
-}
-
-.gbc:hover .gbc-link {
-    display: block;
-}
-
-.nes:hover .nes-link {
-    display: block;
-}
-
-.snes:hover .snes-link {
-    display: block;
-}
-
 a:visited, a:link {
     color: white;
     text-decoration: none;
