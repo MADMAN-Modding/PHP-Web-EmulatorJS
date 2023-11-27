@@ -2,6 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8" lang="en">
+
+        <meta name="viewport" content="width=divice-width, initial-scale=1.0">
+
         <title>E.P.W.B.</title>
     	<!--Bootstrap5-->
             <!-- Latest compiled and minified CSS -->
