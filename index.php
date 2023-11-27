@@ -12,9 +12,9 @@
         <link type="text/css" rel="stylesheet" href="css/universal.css"/>
     </head>
     <body>
-        <h1 id="title">Welcome to E.P.W.B.<a href="https://github.com/MADMAN-Modding/EPWF" target="_blank"><img class="github" src="https://github.com/favicon.ico"></a></h1>
+        <h1 id="title">Welcome to E.P.W.F.<a href="https://github.com/MADMAN-Modding/EPWF" target="_blank"><img class="github" src="https://github.com/favicon.ico"></a></h1>
 
-        <h2>Or EmulatorJS PHP Web Backend</h2>
+        <h2>Or EmulatorJS PHP Web Frontend</h2>
         
         <h3>Hover/Tap on a console to list the games</h3>
 
