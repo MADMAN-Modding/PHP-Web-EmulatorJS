@@ -2,7 +2,7 @@
 <h1>Also known as EmulatorJS, PHP, Web, Frontend</h1>
 <h2>This project was made in order to allow people to easily host their own roms on their local network</h2>
 
-<p>Running this project is not too complicated, all you need to do is host a web server like apache, with php installed. Here is a list of how to install this on different operating systems</p>
+<p>Running this project is not too complicated, all you need to do is host a web server such as apache, with php installed. Here is a list of how to install this on different operating systems</p>
 
 <h3>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h3>
 
