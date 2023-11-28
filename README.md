@@ -17,6 +17,7 @@
     sudo apt install apache2 php samba git
 
 <p>This is the alternative command</p>
+    
     sudo apt install apache2 php
 
   <p>You can now connect to the Apache default page using the ip of the computer you installed this on, the command <b>ip a</b> will list your ip address</p>
