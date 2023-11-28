@@ -22,10 +22,20 @@
 
   <p>You can now connect to the Apache default page using the ip of the computer you installed this on, the command <b>ip a</b> will list your ip address</p>
 
-  <h2>Configuring Samba</h2>
+<h2>Configuring Samba</h2>
 
-  <h2>Cloning the repository</h2>
+<p>By default, the smb.conf file in /etc/samba/ is very messy with comments and configs for samba. Since this isn't really need ed I like to just remove it and make my own, this is up to you as we are just simply adding a share to the file.</p>
 
-  <p>The directory that holds the code is protected by root, for future please run the following command to set the correct permissions</p>
+      `    sudo rm /etc/samba/smb.conf
+
+<p>Now that you have deleted your config file, or have just left it alone. Open it with the vim command or nano</p>
+
+        nano /etc/samba/smb.conf
+
+<p>Copy the next part into the config file, feel free to edit what's in bracket, comments, and guest setting</p>
+
+<h2>Cloning the repository</h2>
+
+<p>The directory that holds the code is protected by root, for future please run the following command to set the correct permissions</p>
 
     sudo chmod 777 /var/www/html/ -R
