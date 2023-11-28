@@ -4,8 +4,6 @@
 
 <p>Running this project is not too complicated, all you need to do is host a web server such as apache, with php installed. Here is a list of how to install this on different operating systems</p>
 
-<p>You will need your own legally dumped roms</p>
-
 <h3>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h3>
 
 <h2>Installing Dependencies</h2>
