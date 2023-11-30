@@ -2,11 +2,19 @@
 <h1>Also known as EmulatorJS, PHP, Web, Frontend</h1>
 <h2>This project was made in order to allow people to easily host their own roms on their local network</h2>
 
-<p>Running this project is not too complicated, all you need to do is host a web server such as apache, with php installed. Here is a list of how to install this on different operating systems</p>
+<p>Running this project is not too complicated, all you need to do is host a web server such as apache, with php installed. Here is a list of how to install this on different operating systems.</p>
 
-<h3>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h3>
+<h2>Windows</h2>
 
-<h2>Installing Dependencies</h2>
+<h3>Installing Dependencies</h3>
+
+<p>Installing PHP is a bit of an inaccuracy, on Windows all you have to do is <a href="https://windows.php.net/download#php-8.3">download it</a>. I recommend getting the .zip of the non thread safe. Once downloaded, extract the .zip file by right-clicking and press extract all. Now you can move this to whatever folder you want, or not, it doesn't matter.</p>
+
+<h3>Adding PHP to the PATH (optional)</h3>
+
+<h2>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h2>
+
+<h3>Installing Dependencies</h3>
 
 <p>First update your repositories with the following command</p>
 
@@ -22,7 +30,7 @@
 
   <p>You can now connect to the Apache default page using the ip of the computer you installed this on, the command <b>ip a</b> will list your ip address</p>
 
-<h2>Configuring Samba</h2>
+<h3>Configuring Samba</h3>
 
 <p>By default, the smb.conf file in /etc/samba/ is very messy with comments and configs for samba. Since this isn't really need ed I like to just remove it and make my own, this is up to you as we are just simply adding a share to the file.</p>
 
@@ -56,7 +64,7 @@
 
     smb://ip-address/EPFW
 
-<h2>Cloning the repository</h2>
+<h3>Cloning the repository</h3>
 
 <p>The directory that holds the code is protected by root, for future please run the following command to set the correct permissions</p>
 
@@ -66,7 +74,7 @@
 
     cd /var/www/html && git clone https://github.com/MADMAN-Modding/EPWF.git
 
-<h2>Setting up the final parts</h2>
+<h3>Setting up the final parts</h3>
 
 <p>If you were to try and login to the website as of now, it would simply display the apache installation succesful screen, we need to delete the index.html file so that it uses the index.php file</p>
 
