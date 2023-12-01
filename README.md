@@ -14,7 +14,7 @@
 
 <p>Open the system enviornment variables by typing environmental into the Windows searchbar and pressing enter, it should open the correct menu.</p>
 
-![A image of searching for enviornmental variables settings](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables.png)
+![A image of searching for enviornmental variables settings](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables_Step1.png)
 
 <p>Now click on the "Environmental Variables" button in the bottom right of the menu.</p>
 
