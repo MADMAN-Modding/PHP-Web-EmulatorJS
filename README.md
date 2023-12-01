@@ -8,7 +8,13 @@
 
 <h3>Installing Dependencies</h3>
 
+<h4>PHP</h4>
+
 <p>Installing PHP is a bit of an inaccuracy, on Windows all you have to do is <a href="https://windows.php.net/download#php-8.3">download it</a>. I recommend getting the .zip of the non thread safe. Once downloaded, extract the .zip file by right-clicking and press extract all. Now you can move this to whatever folder you want, or not, it doesn't matter.</p>
+
+<h4>Git (optional)</h4>
+
+<p>Installing git makes it easier to update the clonned code when the project it updated. Download git from <a href="">here</a>. Get the version for your machine, most likely it will be 64-bit.</p>
 
 <h3>Adding PHP to the PATH (optional)</h3>
 
@@ -21,6 +27,18 @@
 ![Environmental variables step2](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables_Step2.png)
 
 <p>We're almost done with this part, now select PATH and press edit</p>
+
+<h3>Clonning the Repository</h3>
+
+<p>Open up Powershell and cd to where you would like to store the data.</p>
+
+    cd "C:\Path\to\your\data"
+
+<p>Run the following command to clone the repository</p>
+
+<h3>Running the PHP server</h3>
+
+<p>Open up Powershell or CMD, I personally just use Powershell because I prefer it, cd to the directory that holds the code.</p>
 
 <h2>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h2>
 
