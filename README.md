@@ -4,6 +4,17 @@
 
 <p>Running this project is not too complicated, all you need to do is host a web server such as apache, with php installed. Here is a list of how to install this on different operating systems.</p>
 
+<h2>List of console to folder name</h2>
+
+| Consoe Name  | Folder Name |
+|--------------|:-----:|
+| Gameboy |  gb |
+| Gameboy Advanced| gba |
+| Gameboy Color | gbc |
+| Nintendo DS   | nds |
+| Nintendo Entertainment System | nes |
+| Super Nintedo Entertainment System | snes |
+
 <h2>Windows</h2>
 
 <h3>Installing Dependencies</h3>
@@ -55,13 +66,13 @@
 
     ipconfig
 
-<p>Look for the line that says ipv4 and copy the ip from there, if it doesn't look the example I supplied that's ok, I'm on a cider 24 network while networks like 192.168 are on a cider 23.</p>
+<p>Look for the line that says ipv4 and copy the ip from there, if it doesn't look the example I supplied that's ok, I'm on a cider 24 network while networks like 192.168 are on a cider 23 network.</p>
 
 <p>If you have added php to the PATH run the first command, if you chose to not add PHP to the PATH than run the second command.</p>
 
     php -S ip-address:8080
 
-<p>You can now but the ip-address:8080 into the url bar of your browser and you will be able to see the website. Now you just need to add your roms my making a folder called roms and putting games in their <a>respective folder</a>.</p>
+<p>You can now but the ip-address:8080 into the url bar of your browser and you will be able to see the website. Now you just need to add your roms my making a folder called roms and putting games in their <a href="#List-of-console-to-folder-name">respective folder</a>. You should be all set, enjoy playing your roms!</p>
 
 <h2>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h2>
 
@@ -135,7 +146,7 @@
 
     mkdir roms
 
-<p>Now cd into the directory and make a folder for the respective games, check the <a>list</a> at the top for info on the folder structure.</p>
+<p>Now cd into the directory and make a folder for the respective games, check the <a href="#List-of-console-to-folder-name">list</a> at the top for info on the folder structure.</p>
 
     cd roms
 
