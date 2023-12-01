@@ -1,4 +1,4 @@
-![environmentalVariables](https://github.com/MADMAN-Modding/EPWF/assets/115199645/e7a5fedd-d48e-4f9f-9941-b0557278fb0d)<h1>Welcome to E.P.W.F.!</h1>
+<h1>Welcome to E.P.W.F.!</h1>
 <h1>Also known as EmulatorJS, PHP, Web, Frontend</h1>
 <h2>This project was made in order to allow people to easily host their own roms on their local network</h2>
 
@@ -15,6 +15,12 @@
 <p>Open the system enviornment variables by typing environmental into the Windows searchbar and pressing enter, it should open the correct menu.</p>
 
 ![A image of searching for enviornmental variables settings](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables.png)
+
+<p>Now click on the "Environmental Variables" button in the bottom right of the menu.</p>
+
+![Environmental variables step2](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables_Step2.png)
+
+<p>We're almost done with this part, now select PATH and press edit</p>
 
 <h2>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h2>
 
