@@ -12,11 +12,7 @@
 
 <p>Installing PHP is a bit of an inaccuracy, on Windows all you have to do is <a href="https://windows.php.net/download#php-8.3">download it</a>. I recommend getting the .zip of the non thread safe. Once downloaded, extract the .zip file by right-clicking and press extract all. Now you can move this to whatever folder you want, or not, it doesn't matter.</p>
 
-<h4>Git (optional)</h4>
-
-<p>Installing git makes it easier to update the clonned code when the project it updated. Download git from <a href="">here</a>. Get the version for your machine, most likely it will be 64-bit.</p>
-
-<h3>Adding PHP to the PATH (optional)</h3>
+<h3>Adding PHP to the PATH (optional but recommended)</h3>
 
 <p>Open the system enviornment variables by typing environmental into the Windows searchbar and pressing enter, it should open the correct menu.</p>
 
@@ -28,17 +24,44 @@
 
 <p>We're almost done with this part, now select PATH and press edit</p>
 
-<h3>Clonning the Repository</h3>
 
-<p>Open up Powershell and cd to where you would like to store the data.</p>
+<h4>Git (optional but recommended)</h4>
+
+<p>Installing git makes it easier to update the clonned code when the project it updated. Download git from <a href="https://git-scm.com/download/win">here</a>. Get the version for your machine, most likely it will be 64-bit. Run the .exe and just go through the menus, the default options will be fine for this.</p>
+
+<h3>Cloning the Repository (only with git)</h3>
+
+<p>Open up Powershell and cd to where you will be storing the project.</p>
 
     cd "C:\Path\to\your\data"
 
 <p>Run the following command to clone the repository</p>
 
+    git clone https://github.com/MADMAN-Modding/EPWF.git
+
+<p>This will clone the repository to the folder you are in.</p>
+
+<h3>Getting the code without git installed</h3>
+
+<p>Go to the <a href="https://github.com/MADMAN-Modding/EPWF">main page of the project</a>. Press the code button above and to the right of the files displayed, then press download zip. Just extract that folder to the folder you will be keeping the project.</p>
+
 <h3>Running the PHP server</h3>
 
-<p>Open up Powershell or CMD, I personally just use Powershell because I prefer it, cd to the directory that holds the code.</p>
+<p>Open up Powershell or CMD, I personally use Powershell because I prefer it, cd into the directory that holds the code, cd to where you are storing the project.</p>
+
+    cd "C:\Path\to\your\data"
+
+<p>Before starting the server get your ip so other devices can use the website</p>
+
+    ipconfig
+
+<p>Look for the line that says ipv4 and copy the ip from there, if it doesn't look the example I supplied that's ok, I'm on a cider 24 network while networks like 192.168 are on a cider 23.</p>
+
+<p>If you have added php to the PATH run the first command, if you chose to not add PHP to the PATH than run the second command.</p>
+
+    php -S ip-address:8080
+
+<p>You can now but the ip-address:8080 into the url bar of your browser and you will be able to see the website. Now you just need to add your roms my making a folder called roms and putting games in their <a>respective folder</a>.</p>
 
 <h2>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h2>
 
