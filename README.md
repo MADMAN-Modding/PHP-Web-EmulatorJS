@@ -14,7 +14,7 @@
 
 <p>Open the system enviornment variables by typing environmental into the Windows searchbar and pressing enter, it should open the correct menu.</p>
 
-<img src="README Stuff/environmentalVariables.png">
+![A image of searching for enviornmental variables settings](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables.png)
 
 <h2>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h2>
 
