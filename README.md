@@ -2,9 +2,7 @@
 <h1>Also known as EmulatorJS, PHP, Web, Frontend</h1>
 <h2>This project was made in order to allow people to easily host their own roms on their local network</h2>
 
-<p>Running this project is not too complicated, all you need to do is host a web server such as apache, with php installed. Here is a list of how to install this on different operating systems.</p>
-
-<h2>List of console to folder name</h2>
+<h2>List of consoles to folder name</h2>
 
 | Consoe Name  | Folder Name |
 |--------------|:-----:|
@@ -13,67 +11,15 @@
 | Gameboy Color | gbc |
 | Nintendo DS   | nds |
 | Nintendo Entertainment System | nes |
-| Super Nintedo Entertainment System | snes |
+| Super Nintedo Entertainment System | snes or sfc |
 | Playstation 1 | psx |
 
-<h2>Windows</h2>
+<p>Running this project is not too complicated, all you need to do is host a web server such as apache, with php installed. Here is a list of how to install this on different operating systems.</p>
 
-<h3>Installing Dependencies</h3>
-
-<h4>PHP</h4>
-
-<p>Installing PHP is a bit of an inaccuracy, on Windows all you have to do is <a href="https://windows.php.net/download#php-8.3">download it</a>. I recommend getting the .zip of the non thread safe. Once downloaded, extract the .zip file by right-clicking and press extract all. Now you can move this to whatever folder you want, or not, it doesn't matter.</p>
-
-<h3>Adding PHP to the PATH (optional but recommended)</h3>
-
-<p>Open the system enviornment variables by typing environmental into the Windows searchbar and pressing enter, it should open the correct menu.</p>
-
-![A image of searching for enviornmental variables settings](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables_Step1.png)
-
-<p>Now click on the "Environmental Variables" button in the bottom right of the menu.</p>
-
-![Environmental variables step2](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables_Step2.png)
-
-<p>We're almost done with this part, now select PATH and press edit</p>
-
-
-<h4>Git (optional but recommended)</h4>
-
-<p>Installing git makes it easier to update the clonned code when the project it updated. Download git from <a href="https://git-scm.com/download/win">here</a>. Get the version for your machine, most likely it will be 64-bit. Run the .exe and just go through the menus, the default options will be fine for this.</p>
-
-<h3>Cloning the Repository (only with git)</h3>
-
-<p>Open up Powershell and cd to where you will be storing the project.</p>
-
-    cd "C:\Path\to\your\data"
-
-<p>Run the following command to clone the repository</p>
-
-    git clone https://github.com/MADMAN-Modding/EPWF.git
-
-<p>This will clone the repository to the folder you are in.</p>
-
-<h3>Getting the code without git installed</h3>
-
-<p>Go to the <a href="https://github.com/MADMAN-Modding/EPWF">main page of the project</a>. Press the code button above and to the right of the files displayed, then press download zip. Just extract that folder to the folder you will be keeping the project.</p>
-
-<h3>Running the PHP server</h3>
-
-<p>Open up Powershell or CMD, I personally use Powershell because I prefer it, cd into the directory that holds the code, cd to where you are storing the project.</p>
-
-    cd "C:\Path\to\your\data"
-
-<p>Before starting the server get your ip so other devices can use the website</p>
-
-    ipconfig
-
-<p>Look for the line that says ipv4 and copy the ip from there, if it doesn't look the example I supplied that's ok, I'm on a cider 24 network while networks like 192.168 are on a cider 23 network.</p>
-
-<p>If you have added php to the PATH run the first command, if you chose to not add PHP to the PATH than run the second command.</p>
-
-    php -S ip-address:8080
-
-<p>You can now but the ip-address:8080 into the url bar of your browser and you will be able to see the website. Now you just need to add your roms my making a folder called roms and putting games in their <a href="#List-of-console-to-folder-name">respective folder</a>. You should be all set, enjoy playing your roms!</p>
+| OS |
+|----|
+| <a href="#Debian/Ubuntu%20or%20anything%20else@$%20that's%20based%20on%20Debian/Ubuntu%20should%20be%20the%20same">Debian/Ubuntu</a> |
+| <a href="#Windows">Windows</a> |
 
 <h2>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h2>
 
@@ -147,10 +93,79 @@
 
     mkdir roms
 
-<p>Now cd into the directory and make a folder for the respective games, check the <a href="#List-of-console-to-folder-name">list</a> at the top for info on the folder structure.</p>
+<p>Now cd into the directory and make a folder for the respective games, check the <a href="#List-of-consoles-to-folder-name">list</a> at the top for info on the folder structure.</p>
 
     cd roms
 
     mkdir consoleAbbreviatedName
 
 <p>Once your games are in the correct folder, you should be able to click any console then click a game and you will be all set. Enjoy playing your games!</p>
+
+<h2>Windows</h2>
+
+<h3>Installing Dependencies</h3>
+
+<h4>PHP</h4>
+
+<p>Installing PHP is a bit of an inaccuracy, on Windows all you have to do is <a href="https://windows.php.net/download#php-8.3">download it</a>. I recommend getting the .zip of the non thread safe. Once downloaded, extract the .zip file by right-clicking and press extract all. Now you can move this to whatever folder you want, or not, it doesn't matter.</p>
+
+<h3>Adding PHP to the PATH (optional but recommended)</h3>
+
+<p>Open the system enviornment variables by typing environmental into the Windows searchbar and pressing enter, it should open the correct menu.</p>
+
+![An image of searching for enviornmental variables settings](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables_Step1.png)
+
+<p>Now click on the "Environmental Variables" button in the bottom right of the menu.</p>
+
+![Environmental variables step2](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables_Step2.png)
+
+<p>We're almost done with this part, now select PATH and press edit</p>
+
+![An image opening the environmental variables configuration](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables_Step3.png)
+
+<p>Now just press new and type the path of the folder you are keeping the php files, if there are space than surround the path with quotes.</p>
+
+![A image of adding a environmental variable](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/environmentalVariables_Step4.png)
+
+<p>Now you should be all set to continue on with setup.</p>
+
+<h4>Git (optional but recommended)</h4>
+
+<p>Installing git makes it easier to update the clonned code when the project it updated. Download git from <a href="https://git-scm.com/download/win">here</a>. Get the version for your machine, most likely it will be 64-bit. Run the .exe and just go through the menus, the default options will be fine for this.</p>
+
+<h3>Cloning the Repository (only with git)</h3>
+
+<p>Open up Powershell and cd to where you will be storing the project.</p>
+
+    cd "C:\Path\to\your\data"
+
+<p>Run the following command to clone the repository</p>
+
+    git clone https://github.com/MADMAN-Modding/EPWF.git
+
+<p>This will clone the repository to the folder you are in.</p>
+
+<h3>Getting the code without git installed</h3>
+
+<p>Go to the <a href="https://github.com/MADMAN-Modding/EPWF">main page of the project</a>. Press the code button above and to the right of the files displayed, then press download zip. Just extract that folder to the folder you will be keeping the project.</p>
+
+<h3>Running the PHP server</h3>
+
+<p>Open up Powershell or CMD, I personally use Powershell because I prefer it, cd into the directory that holds the code, cd to where you are storing the project.</p>
+
+    cd "C:\Path\to\your\data"
+
+<p>Before starting the server get your ip so other devices can use the website</p>
+
+    ipconfig
+
+<p>Look for the line that says ipv4 and copy the ip from there, if it doesn't look the example I supplied that's ok. In this test virtual machine the ip I would use is 10.0.0.120</p>
+
+![Ipconfig output image](https://github.com/MADMAN-Modding/EPWF/blob/main/README%20Stuff/ipconfig.png)
+
+<p>If you have added php to the PATH run the first command, if you chose to not add PHP to the PATH than run the second command.</p>
+
+    php -S ip-address:8080
+
+<p>You can now but the ip-address:8080 into the url bar of your browser and you will be able to see the website. Now you just need to add your roms my making a folder called roms and putting games in their <a href="#List-of-consoles-to-folder-name">respective folder</a>. You should be all set, enjoy playing your roms!</p>
+
