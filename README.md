@@ -21,6 +21,10 @@
 | <a href="#Debian/Ubuntu%20or%20anything%20else@$%20that's%20based%20on%20Debian/Ubuntu%20should%20be%20the%20same">Debian/Ubuntu</a> |
 | <a href="#Windows">Windows</a> |
 
+<h2>Updating</h2>
+
+<p>If you ever want to update the project make sure you cd to the directory containing the project and run git pull, this will only work if you used the git setup.</p>
+
 <h2>Debian/Ubuntu or anything else that's based on Debian/Ubuntu should be the same</h2>
 
 <h3>Installing Dependencies</h3>
