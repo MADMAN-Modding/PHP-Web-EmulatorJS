@@ -14,6 +14,7 @@
 | Nintendo DS   | nds |
 | Nintendo Entertainment System | nes |
 | Super Nintedo Entertainment System | snes |
+| Playstation 1 | psx |
 
 <h2>Windows</h2>
 
