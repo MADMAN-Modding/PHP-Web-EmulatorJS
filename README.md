@@ -14,6 +14,8 @@
 | Super Nintedo Entertainment System | snes or sfc |
 | Playstation 1 | psx |
 
+<p>Here is a list of characters that you can't have in your roms file name "' and spaces aren't allowed either.</p>
+
 <p>Running this project is not too complicated, all you need to do is host a web server such as apache, with php installed. Here is a list of how to install this on different operating systems.</p>
 
 | OS |
