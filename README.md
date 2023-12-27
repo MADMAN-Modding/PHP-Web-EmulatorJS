@@ -20,7 +20,7 @@
 
 | OS |
 |----|
-| <a href="#Debian/Ubuntu%20or%20anything%20else@$%20that's%20based%20on%20Debian/Ubuntu%20should%20be%20the%20same">Debian/Ubuntu</a> |
+| <a href="#debianubuntu-or-anything-else-thats-based-on-debianubuntu-should-be-the-same">Debian/Ubuntu</a> |
 | <a href="#Windows">Windows</a> |
 
 <h2>Updating</h2>
