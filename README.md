@@ -59,7 +59,7 @@
 
     [EPFW]
         comment=A share for EPFW
-        path = /var/ww/html
+        path = /var/www/html
         guest ok = no
         browsable = yes
     
