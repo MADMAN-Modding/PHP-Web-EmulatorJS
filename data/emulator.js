@@ -84,9 +84,6 @@ class EmulatorJS {
             'amiga': 'puae',
             'c64': 'vice_x64'
         }
-        if (this.isSafari && this.isMobile && this.getCore(true) === "n64") {
-            return "parallel_n64";
-        }
         return options[core] || core;
     }
     extensions = {
@@ -1560,6 +1557,7 @@ class EmulatorJS {
         })
         
         
+        let paddingSet = false;
         //Now add buttons
         const addButton = (title, image, callback, element, both) => {
             const button = this.createElement("button");
@@ -1570,7 +1568,7 @@ class EmulatorJS {
             svg.innerHTML = image;
             const text = this.createElement("span");
             text.innerText = this.localization(title);
-            if (title == "Enter Fullscreen" || title == "Exit Fullscreen") text.classList.add("ejs_menu_text_right");
+            if (paddingSet) text.classList.add("ejs_menu_text_right");
             text.classList.add("ejs_menu_text");
             
             button.classList.add("ejs_menu_button");
@@ -1726,6 +1724,7 @@ class EmulatorJS {
         const spacer = this.createElement("span");
         spacer.classList.add("ejs_menu_bar_spacer");
         this.elements.menu.appendChild(spacer);
+        paddingSet = true;
         
         const volumeSettings = this.createElement("div");
         volumeSettings.classList.add("ejs_volume_parent");
@@ -1922,6 +1921,7 @@ class EmulatorJS {
                 pauseButton.style.display = "none";
                 playButton.style.display = "none";
             }
+            if (this.config.buttonOpts.contextMenuButton === false) contextMenuButton.style.display = "none"
             if (this.config.buttonOpts.restart === false) restartButton.style.display = "none"
             if (this.config.buttonOpts.settings === false) settingButton[0].style.display = "none"
             if (this.config.buttonOpts.fullscreen === false) {
