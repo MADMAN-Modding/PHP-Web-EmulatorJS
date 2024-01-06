@@ -1,76 +1,81 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <!--HTML file auto generated using EmulatorJS codehelper-->
-        <link type="text/css" rel="stylesheet" href="css/universal.css">
-        <style>
-            body {
-                max-width:100%;
-            }
-        </style>
-        <title id="title"></title>
-    </head>
-    <body>
-        <center>
-            <div style="width:90vw;height:90vh;max-width:100%;padding-top: auto;padding-bottom: auto;">
-                <div id="game"></div>
-            </div>
-        </center>
-        <script>
 
-            // Gets variables from the URL
-            const url = new URLSearchParams(window.location.search);
-            
-            // Gets the rom variable
-            const rom = url.get("rom");
+<head>
+    <link type="text/css" rel="stylesheet" href="css/universal.css">
+    <style>
+        body {
+            max-width: 100%;
+        }
+    </style>
+    <title id="title"></title>
+</head>
 
-            // Gets the console variable
-            let console = url.get("console");
+<body>
+    <center>
+        <div style="width:90vw;height:90vh;max-width:100%;padding-top: auto;padding-bottom: auto;">
+            <div id="game"></div>
+        </div>
+    </center>
+    <script>
 
-            // Sets the path to directory for the rom
-            const path = "/roms/" + console + "/";
+        // Gets variables from the URL
+        const url = new URLSearchParams(window.location.search);
 
-            // Sets the extension to add to the rom file
-            let extension = "." + console;
+        // Gets the rom variable
+        const rom = url.get("rom");
 
-            // If the rom is a SNES rom, it will set the extension to the correct alternative
-            if (console=="snes") {
-                extension = ".sfc";
-            } 
-            
-            // If the rom is a GBC rom, it will change the console to be GB since they both use the GB core
-            else if (console == "gbc") {
-                console = "gb";
-            }
+        // Gets the console variable
+        let gameConsole = url.get("console");
 
-            // Changes the page title to the rom name
-            function rename () {
-                document.title = rom;
-            }
+        // Sets the path to directory for the rom
+        const path = "/roms/" + gameConsole + "/";
 
-            // Sets what document to use for the canvas
-            EJS_player = "#game";
-            
-            // Sets the core
-            EJS_core = console;
+        const extensionsList = ["7z", "zip", gameConsole, "sfc", "rar"];
 
-            // Sets the game name for save states 
-            EJS_gameName = rom - "." - console;
+        displayName = rom;
 
-            // Sets the UI color
-            EJS_color = "#0064ff";
+        extensionsList.forEach(extensionsListEntry => {
+            displayName = displayName.replace("." + extensionsListEntry, "");
+        });
 
-            // Starts the game on laod
-            EJS_startOnLoaded = true;
+        displayName = displayName.replace(/-/g, " ");
 
-            // Sets the local path to data
-            EJS_pathtodata = "data/";
+        // If the rom is a SNES rom, it will set the extension to the correct alternative
+        if (gameConsole == "snes") {
+            extension = ".sfc";
+        }
 
-            // Sets the path to the rom files
-            EJS_gameUrl = path + rom + extension
+        // If the rom is a GBC rom, it will change the gameConsole to be GB since they both use the GB core
+        else if (gameConsole == "gbc") {
+            gameConsole = "gb";
+        }
 
-            // Runs the rename function to change the page name
-            rename();
-        </script>
-        <script src="https://cdn.jsdelivr.net/gh/EmulatorJS/EmulatorJS@latest/data/loader.js"></script>
-    </body>
+        // Changes the page title to the rom name
+        document.title = displayName;
+
+        // Sets what document to use for the canvas
+        EJS_player = "#game";
+
+        // Sets the core
+        EJS_core = gameConsole;
+
+        // Sets the game name for save states 
+        EJS_gameName = rom - "." - gameConsole;
+
+        // Sets the UI color
+        EJS_color = "#0064ff";
+
+        // Starts the game on laod
+        EJS_startOnLoaded = true;
+
+        // Sets the local path to data
+        EJS_pathtodata = "data/";
+
+        // Sets the path to the rom files
+        EJS_gameUrl = path + rom
+    </script>
+    <script src="data/loader.js"></script>
+</body>
+
 </html>

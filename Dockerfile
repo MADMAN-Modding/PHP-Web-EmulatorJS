@@ -7,14 +7,14 @@ RUN apk --update add \
     php \
     php-apache2 \
     git \
-    # neofetch \
+    neofetch \
     && rm -rf /var/cache/apk/* \
     && rm -r /var/www/localhost/htdocs/*
 
 # Clones the repos
-# RUN git clone https://github.com/MADMAN-Modding/EPWF.git /var/www/localhost/htdocs/
+RUN git clone https://github.com/MADMAN-Modding/EPWF.git /var/www/localhost/htdocs/
 
-COPY . /var/www/localhost/htdocs/
+# COPY . /var/www/localhost/htdocs/
 
 # sets the directory permissions for the files
 RUN chmod 777 -R /var/www/localhost/htdocs/*
